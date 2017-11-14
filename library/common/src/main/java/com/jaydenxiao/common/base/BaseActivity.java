@@ -265,7 +265,14 @@ public abstract class BaseActivity<T extends BasePresenter, E extends BaseModel>
         if (mPresenter != null)
             mPresenter.onDestroy();
         mRxManager.clear();
-        ButterKnife.unbind(this);
+
+        /**
+         * 在8.4中ButterKnife移除了ButterKnife.unBind()方法，
+         * 当时取而代之的是ButterKnife.bind(this)会返回一个Unbinder的引用，
+         * 通过Unbinder的unbind()方法进行解除绑定。
+         */
+//        ButterKnife.unbind(this);
+
         AppManager.getAppManager().finishActivity(this);
     }
 }

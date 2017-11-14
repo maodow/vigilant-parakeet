@@ -10,7 +10,7 @@ import com.jaydenxiao.common.base.BaseFragment;
 import com.jaydenxiao.common.commonwidget.NormalTitleBar;
 import com.jaydenxiao.common.daynightmodeutils.ChangeModeController;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -19,11 +19,11 @@ import butterknife.OnClick;
  * on 2016.09.17:07
  */
 public class CareMainFragment extends BaseFragment {
-    @Bind(R.id.ll_friend_zone)
+    @BindView(R.id.ll_friend_zone)
     LinearLayout llFriendZone;
-    @Bind(R.id.iv_add)
+    @BindView(R.id.iv_add)
     ImageView ivAdd;
-    @Bind(R.id.ntb)
+    @BindView(R.id.ntb)
     NormalTitleBar ntb;
 
     @Override

@@ -21,7 +21,7 @@ import com.jaydenxiao.androidfire.utils.SystemUiVisibilityUtil;
 import com.jaydenxiao.androidfire.widget.PullBackLayout;
 import com.jaydenxiao.common.commonwidget.StatusBarCompat;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
@@ -33,14 +33,13 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  */
 public class PhotosDetailActivity extends AppCompatActivity implements PullBackLayout.Callback {
 
-
-    @Bind(R.id.photo_touch_iv)
+    @BindView(R.id.photo_touch_iv)
     PhotoView photoTouchIv;
-    @Bind(R.id.pull_back_layout)
+    @BindView(R.id.pull_back_layout)
     PullBackLayout pullBackLayout;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.background)
+    @BindView(R.id.background)
     RelativeLayout background;
     private boolean mIsToolBarHidden;
     private boolean mIsStatusBarHidden;
@@ -66,7 +65,7 @@ public class PhotosDetailActivity extends AppCompatActivity implements PullBackL
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
+//        ButterKnife.unbind(this);
     }
 
     public void initView() {
